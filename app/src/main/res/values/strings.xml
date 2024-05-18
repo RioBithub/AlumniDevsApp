@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Alumni Dev\'s App</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login">Login</string>
+
+
+</resources>
