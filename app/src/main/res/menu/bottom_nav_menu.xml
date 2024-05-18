@@ -1,14 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/home"
         android:title="Home"/>
     <item
         android:id="@+id/navigation_berita"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/news"
         android:title="Berita"/>
     <item
-        android:id="@+id/navigation_profile"
+        android:id="@+id/profile"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Profile"/>
 </menu>

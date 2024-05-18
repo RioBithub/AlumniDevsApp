@@ -14,15 +14,15 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_launcher_foreground"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pnj"
             android:layout_gravity="center" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to Lafyuu"
+            android:text="Welcome to devalvin app"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
