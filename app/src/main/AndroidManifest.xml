@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AlumniDevsApp"
         tools:targetApi="31">
-        <activity
-            android:name=".Berita"
-            android:exported="false" />
 
         <activity
             android:name=".DetailAlumniActivity"
@@ -26,9 +23,6 @@
             android:exported="false" />
         <activity
             android:name=".TambahDataActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BeritaAdapter"
             android:exported="false" />
         <activity
             android:name=".dashboard"

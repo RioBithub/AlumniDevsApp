@@ -104,63 +104,64 @@ class dashboard : AppCompatActivity() {
                     "Harga BBM Pertamina Tetap Stabil",
                     "Pertamina tidak menaikkan harga BBM nonsubsidi untuk Mei 2024.",
                     "PT Pertamina Patra Niaga mengumumkan bahwa harga BBM nonsubsidi seperti Pertamax dan Dex Series tidak mengalami perubahan harga per 1 Mei 2024. Harga Pertamax tetap Rp 12.950 per liter. Keputusan ini bertujuan menjaga stabilitas harga di tengah situasi ekonomi yang menantang, dan ini merupakan bagian dari upaya pemerintah untuk menjaga daya beli masyarakat. Menteri BUMN Erick Thohir menyatakan bahwa langkah ini adalah peran BUMN untuk masyarakat.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita1
                 ),
                 Berita(
                     "Pemilu 2024: Tahapan dan Persiapan",
                     "Proses Pemilu 2024 di Indonesia sedang berlangsung dengan persiapan yang matang.",
                     "Pemilu 2024 di Indonesia memasuki tahap krusial dengan berbagai persiapan dilakukan oleh KPU dan partai politik. Isu-isu seperti keamanan, logistik, dan transparansi menjadi fokus utama untuk memastikan Pemilu berjalan lancar dan adil. Berbagai debat dan kampanye terus berlangsung, menarik perhatian publik.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita2
                 ),
                 Berita(
                     "Kenaikan Kasus DBD di Indonesia",
                     "Kasus Demam Berdarah Dengue (DBD) di Indonesia meningkat signifikan.",
                     "Kementerian Kesehatan melaporkan lonjakan kasus DBD di beberapa wilayah Indonesia. Penyebab utama peningkatan ini adalah perubahan cuaca dan lingkungan yang mendukung perkembangan nyamuk Aedes aegypti. Pemerintah mengimbau masyarakat untuk melakukan langkah-langkah pencegahan seperti 3M (Menguras, Menutup, dan Mendaur ulang).",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita3
                 ),
                 Berita(
                     "Debat Capres dan Cawapres Semakin Panas",
                     "Debat calon presiden dan wakil presiden semakin memanas menjelang Pemilu 2024.",
                     "Debat calon presiden dan wakil presiden untuk Pemilu 2024 semakin intens dengan berbagai isu yang diperdebatkan, termasuk ekonomi, keamanan, dan kesejahteraan sosial. Para kandidat berusaha menarik perhatian pemilih dengan memaparkan visi dan misi mereka secara detail.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita4
                 ),
                 Berita(
                     "Progres Pembangunan IKN Nusantara",
                     "Pembangunan Ibu Kota Nusantara di Kalimantan Timur terus berlanjut.",
                     "Proyek pembangunan Ibu Kota Nusantara (IKN) di Kalimantan Timur menunjukkan progres signifikan. Presiden Jokowi direncanakan mulai bekerja di IKN pada Juli 2024. Pembangunan ini meliputi infrastruktur dasar dan sistem pertahanan cerdas untuk mendukung operasional kota baru tersebut.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita5
                 ),
                 Berita(
                     "Kenaikan Harga Pangan di Pasar Tradisional",
                     "Harga pangan di pasar tradisional mengalami kenaikan.",
                     "Sejumlah pasar tradisional di Indonesia melaporkan kenaikan harga bahan pangan seperti beras, sayur-mayur, dan daging. Penyebab utama kenaikan ini adalah gangguan distribusi dan perubahan cuaca yang mempengaruhi produksi pangan. Pemerintah sedang mencari solusi untuk menstabilkan harga.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita6
                 ),
                 Berita(
                     "Pencapaian Timnas Indonesia di Kompetisi Internasional",
                     "Timnas Indonesia meraih kemenangan penting di kompetisi internasional.",
                     "Tim Nasional Sepak Bola Indonesia berhasil meraih kemenangan dalam pertandingan penting melawan Timnas Irak di kompetisi internasional. Kemenangan ini meningkatkan semangat tim dan dukungan dari para penggemar sepak bola di tanah air.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita7
                 ),
                 Berita(
                     "Peluncuran Film Baru di Bioskop Indonesia",
                     "Beberapa film baru tayang di bioskop Indonesia pada Mei 2024.",
                     "Mei 2024 menghadirkan berbagai film baru yang tayang di bioskop Indonesia, termasuk film lokal dan internasional. Film-film tersebut mencakup berbagai genre seperti horor, aksi, drama, dan komedi, menawarkan pilihan hiburan yang beragam bagi penonton.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita8
                 ),
                 Berita(
                     "Isu Lingkungan dan Perubahan Iklim",
                     "Perubahan iklim menjadi perhatian utama di Indonesia.",
                     "Perubahan iklim terus menjadi isu penting di Indonesia, dengan dampaknya yang semakin nyata seperti peningkatan suhu ekstrem dan gangguan cuaca. Pemerintah dan berbagai organisasi lingkungan hidup terus berupaya mengedukasi masyarakat dan mengimplementasikan kebijakan untuk mitigasi dan adaptasi perubahan iklim.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita9
                 ),
                 Berita(
                     "Perkembangan Teknologi di Sektor Pertanian",
                     "Inovasi teknologi mulai diterapkan di sektor pertanian Indonesia.",
                     "Sektor pertanian Indonesia mulai mengadopsi teknologi canggih seperti drone dan IoT untuk meningkatkan efisiensi dan produktivitas. Langkah ini diharapkan dapat membantu petani dalam mengatasi tantangan seperti perubahan iklim dan kekurangan tenaga kerja, serta meningkatkan hasil panen.",
-                    R.mipmap.ic_launcher
+                    R.drawable.berita10
                 )
             )
+
 
 
 

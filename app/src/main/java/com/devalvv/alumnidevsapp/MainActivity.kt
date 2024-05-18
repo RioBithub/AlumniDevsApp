@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
                 val editor = sharedPreferences.edit()
                 editor.putString("email", email)
-                editor.putString("nim", "123456789")  // NIM kamu
+                editor.putString("nim", "2207411050")  // NIM kamu
                 editor.putString("nama", "Deva Alvyn Budinugraha")  // Nama kamu
                 editor.putString("kelas", "TI 4B")  // Kelas kamu
                 editor.apply()

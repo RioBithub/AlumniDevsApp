@@ -8,20 +8,53 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tentang Aplikasi"
+        android:text="Aplikasi Pendataan Alumni"
         android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        android:layout_marginTop="8dp"/>
+        android:text="Selamat datang di aplikasi Pendataan Alumni, sebuah aplikasi yang dirancang untuk memudahkan pencatatan dan pengelolaan data alumni. Dengan aplikasi ini, Anda dapat menambah, melihat, dan mengedit informasi penting terkait alumni, termasuk data pribadi, riwayat pendidikan, dan informasi kontak."
+        android:layout_marginBottom="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        android:layout_marginTop="8dp"/>
+        android:text="Fitur-fitur utama aplikasi ini meliputi:"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Penambahan Data Alumni: Input data alumni baru dengan mudah.\n• Pengelolaan Data: Lihat dan edit informasi alumni yang telah tersimpan.\n• Berita Alumni: Baca berita terkini yang berkaitan dengan alumni.\n• Profil Pengguna: Lihat informasi pribadi pengguna yang tersimpan di aplikasi."
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tentang Pengembang"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplikasi ini dikembangkan oleh Deva, seorang pengembang aplikasi yang berkomitmen untuk memberikan solusi teknologi yang inovatif dan bermanfaat. Deva telah mengembangkan berbagai aplikasi mobile dan web yang bertujuan untuk meningkatkan efisiensi dan produktivitas pengguna."
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terima kasih telah menggunakan aplikasi Pendataan Alumni. Kami berharap aplikasi ini dapat membantu Anda dalam mengelola data alumni dengan lebih efektif dan efisien. Untuk saran dan masukan, Anda dapat menghubungi kami melalui email di deva@example.com."
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat menggunakan!"
+        android:layout_marginBottom="16dp"/>
 </LinearLayout>
