@@ -1,35 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <ImageView
-        android:id="@+id/imageBerita"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="8dp"
-        android:scaleType="centerCrop" />
+        android:id="@+id/imageViewBerita"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textViewJudul"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:text="Judul"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
 
-        <TextView
-            android:id="@+id/judulBerita"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:text="Judul Berita" />
-
-        <TextView
-            android:id="@+id/deskripsiPendek"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Deskripsi Pendek" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textViewDeskripsiSingkat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi Singkat"
+        android:layout_marginTop="4dp" />
 </LinearLayout>

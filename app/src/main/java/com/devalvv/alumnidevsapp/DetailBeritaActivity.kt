@@ -17,12 +17,12 @@ class DetailBeritaActivity : AppCompatActivity() {
 
         // Ambil data dari Intent
         val judul = intent.getStringExtra("judul")
-        val deskripsi = intent.getStringExtra("deskripsi")
+        val deskripsiPanjang = intent.getStringExtra("deskripsiPanjang")
         val imageResId = intent.getIntExtra("imageResId", R.mipmap.ic_launcher)
 
         // Set data ke view
         textViewJudul.text = judul
-        textViewDeskripsi.text = deskripsi
+        textViewDeskripsi.text = deskripsiPanjang
         imageViewBerita.setImageResource(imageResId)
     }
 }

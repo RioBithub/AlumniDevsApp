@@ -9,21 +9,20 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import android.widget.ArrayAdapter
 
-class BeritaAdapter(context: Context, private val beritaList: List<Berita>) :
-    ArrayAdapter<Berita>(context, 0, beritaList) {
-
+class BeritaAdapter(context: Context, private val beritaList: List<Berita>) : ArrayAdapter<Berita>(context, 0, beritaList) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.item_berita, parent, false)
-        val berita = beritaList[position]
+        val berita = getItem(position)
 
-        val judulTextView = view.findViewById<TextView>(R.id.judulBerita)
-        val deskripsiTextView = view.findViewById<TextView>(R.id.deskripsiPendek)
-        val imageView = view.findViewById<ImageView>(R.id.imageBerita)
+        val textViewJudul = view.findViewById<TextView>(R.id.textViewJudul)
+        val textViewDeskripsiSingkat = view.findViewById<TextView>(R.id.textViewDeskripsiSingkat)
+        val imageViewBerita = view.findViewById<ImageView>(R.id.imageViewBerita)
 
-        judulTextView.text = berita.judul
-        deskripsiTextView.text = berita.deskripsi
-        imageView.setImageDrawable(ContextCompat.getDrawable(context, berita.imageResId))
+        textViewJudul.text = berita?.judul
+        textViewDeskripsiSingkat.text = berita?.deskripsiSingkat
+        berita?.imageResId?.let { imageViewBerita.setImageResource(it) }
 
         return view
     }
 }
+
