@@ -100,16 +100,9 @@ class dashboard : AppCompatActivity() {
 
             // Data dummy untuk berita
             beritaList = listOf(
-                Berita("Judul Berita 1", "Deskripsi Pendek 1", R.mipmap.ic_launcher),
-                Berita("Judul Berita 2", "Deskripsi Pendek 2", R.mipmap.ic_launcher),
-                Berita("Judul Berita 3", "Deskripsi Pendek 3", R.mipmap.ic_launcher),
-                Berita("Judul Berita 4", "Deskripsi Pendek 4", R.mipmap.ic_launcher),
-                Berita("Judul Berita 5", "Deskripsi Pendek 5", R.mipmap.ic_launcher),
-                Berita("Judul Berita 6", "Deskripsi Pendek 6", R.mipmap.ic_launcher),
-                Berita("Judul Berita 7", "Deskripsi Pendek 7", R.mipmap.ic_launcher),
-                Berita("Judul Berita 8", "Deskripsi Pendek 8", R.mipmap.ic_launcher),
-                Berita("Judul Berita 9", "Deskripsi Pendek 9", R.mipmap.ic_launcher),
-                Berita("Judul Berita 10", "Deskripsi Pendek 10", R.mipmap.ic_launcher)
+                Berita("Judul Berita 1", "Deskripsi Panjang 1", R.mipmap.ic_launcher),
+                Berita("Judul Berita 2", "Deskripsi Panjang 2", R.mipmap.ic_launcher),
+                // Tambahkan data lainnya
             )
 
             val adapter = BeritaAdapter(requireContext(), beritaList)
@@ -119,12 +112,14 @@ class dashboard : AppCompatActivity() {
                 val intent = Intent(activity, DetailBeritaActivity::class.java)
                 intent.putExtra("judul", beritaList[position].judul)
                 intent.putExtra("deskripsi", beritaList[position].deskripsi)
+                intent.putExtra("imageResId", beritaList[position].imageResId)
                 startActivity(intent)
             }
 
             return view
         }
     }
+
 
 
     class ProfileFragment : Fragment() {

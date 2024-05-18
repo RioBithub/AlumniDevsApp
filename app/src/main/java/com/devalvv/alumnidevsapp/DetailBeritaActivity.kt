@@ -1,8 +1,9 @@
 package com.devalvv.alumnidevsapp
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.ImageView
+import android.widget.TextView
 
 class DetailBeritaActivity : AppCompatActivity() {
 
@@ -10,13 +11,18 @@ class DetailBeritaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_berita)
 
-        val judulTextView = findViewById<TextView>(R.id.judulDetailBerita)
-        val deskripsiTextView = findViewById<TextView>(R.id.deskripsiDetailBerita)
+        val imageViewBerita = findViewById<ImageView>(R.id.imageViewBerita)
+        val textViewJudul = findViewById<TextView>(R.id.textViewJudul)
+        val textViewDeskripsi = findViewById<TextView>(R.id.textViewDeskripsi)
 
+        // Ambil data dari Intent
         val judul = intent.getStringExtra("judul")
         val deskripsi = intent.getStringExtra("deskripsi")
+        val imageResId = intent.getIntExtra("imageResId", R.mipmap.ic_launcher)
 
-        judulTextView.text = judul
-        deskripsiTextView.text = deskripsi
+        // Set data ke view
+        textViewJudul.text = judul
+        textViewDeskripsi.text = deskripsi
+        imageViewBerita.setImageResource(imageResId)
     }
 }
