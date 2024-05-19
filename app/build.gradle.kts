@@ -12,7 +12,7 @@ android {
         minSdk = 27
         targetSdk = 34
         versionCode = 5
-        versionName = "devasyifaX3.1"
+        versionName = "devasyifaX3.2pro"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
