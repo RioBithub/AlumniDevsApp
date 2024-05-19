@@ -1,17 +1,14 @@
 package com.devalvv.alumnidevsapp
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -63,9 +60,8 @@ class dashboard : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnLogout).setOnClickListener {
-            // Handle Logout
-            Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show()
-            finish()
+            // Show logout confirmation dialog
+            showLogoutConfirmationDialog()
         }
     }
 
@@ -74,6 +70,18 @@ class dashboard : AppCompatActivity() {
             .beginTransaction()
             .replace(R.id.fragment_container, fragment)
             .commit()
+    }
+
+    private fun showLogoutConfirmationDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("Logout")
+            .setMessage("Anda yakin ingin logout?")
+            .setPositiveButton("Ya") { dialog, which ->
+                Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+            .setNegativeButton("Tidak", null)
+            .show()
     }
 
     class HomeFragment : Fragment() {
@@ -163,15 +171,10 @@ class dashboard : AppCompatActivity() {
                 Berita(
                     "Dilaporkan Deva mencintai Syifa",
                     "Bagaimana Deva TI 4B bisa mencintai Syifa TI 4A?",
-                    "Dalam dunia kampus Politeknik Negeri Jakarta, ada cerita cinta yang begitu manis dan menginspirasi. Berawal dari dua mahasiswa Informatika, Deva Alvyn Budinugraha dari kelas TI 4B dan Syifa Azzahirah dari kelas TI 4A. Keduanya seperti dua bagian puzzle yang akhirnya menemukan tempatnya. Berita tentang cinta mereka menggemparkan dunia maya dan nyata. Bagaimana bisa seorang Deva yang tampan dan berotot, yang hobi workout dan gaming, jatuh hati pada Syifa yang manis dan pintar? Ternyata, jawabannya lebih sederhana dari yang kita bayangkan. Cinta mereka bersemi di lorong-lorong kampus, di antara tumpukan tugas dan skripsi, serta di bawah langit-langit perpustakaan yang penuh kenangan.Seperti sektor pertanian Indonesia yang mulai mengadopsi teknologi canggih seperti drone dan IoT untuk meningkatkan efisiensi dan produktivitas, Deva dan Syifa juga mengadopsi 'teknologi cinta' yang canggih. Mereka berdua saling mendukung dalam segala hal, dari coding bersama hingga belajar untuk ujian. Mereka adalah pasangan yang solid, seperti kode yang sempurna tanpa bug. Tidak hanya itu, langkah mereka diharapkan dapat membantu mahasiswa lain dalam mengatasi tantangan akademis, serta meningkatkan semangat dan kebahagiaan. Cerita cinta Deva dan Syifa bukan hanya tentang mereka berdua, tetapi juga tentang bagaimana cinta dapat membuat segalanya menjadi lebih indah dan bermakna.Saat ini, sektor pertanian mungkin sedang berkembang dengan teknologi baru, tetapi cerita cinta Deva dan Syifa menunjukkan bahwa di balik setiap inovasi, ada kisah manusia yang lebih indah. Dalam dunia yang semakin sibuk dan penuh tantangan, cinta mereka adalah pengingat bahwa kebahagiaan sederhana masih ada dan bisa ditemukan di tempat yang tidak terduga.Jadi, bagi kalian yang sedang menanti cinta, ingatlah cerita Deva dan Syifa. Kadang, cinta itu seperti drone yang terbang di atas ladang padi, mencari tempat yang tepat untuk mendarat. Dan ketika cinta itu menemukan tempatnya, segalanya akan menjadi lebih baik dan lebih cerah. Siapa tahu, mungkin kalian adalah pasangan berikutnya yang akan menginspirasi dunia dengan kisah cinta kalian sendiri. Dalam dunia yang semakin kompleks, kisah sederhana ini mengingatkan kita bahwa cinta adalah teknologi tertua dan terbaik yang pernah ada.",
+                    "Dalam dunia kampus Politeknik Negeri Jakarta, ada cerita cinta yang begitu manis dan menginspirasi. Berawal dari dua mahasiswa Informatika, Deva Alvyn Budinugraha dari kelas TI 4B dan Syifa Azzahirah dari kelas TI 4A. Keduanya seperti dua bagian puzzle yang akhirnya menemukan tempatnya. Berita tentang cinta mereka menggemparkan dunia maya dan nyata. Bagaimana bisa seorang Deva yang tampan dan berotot, yang hobi workout dan gaming, jatuh hati pada Syifa yang manis dan pintar? ",
                     R.drawable.berita11
                 )
-
             )
-
-
-
-
 
             val adapter = BeritaAdapter(requireContext(), beritaList)
             listView.adapter = adapter
@@ -187,8 +190,6 @@ class dashboard : AppCompatActivity() {
             return view
         }
     }
-
-
 
     class ProfileFragment : Fragment() {
         override fun onCreateView(
@@ -215,13 +216,25 @@ class dashboard : AppCompatActivity() {
 
             val logoutButton = view.findViewById<Button>(R.id.logoutButton)
             logoutButton.setOnClickListener {
-                // Handle Logout
-                sharedPreferences?.edit()?.clear()?.apply()
-                Toast.makeText(activity, "Logged out", Toast.LENGTH_SHORT).show()
-                activity?.finish()
+                // Show logout confirmation dialog
+                showLogoutConfirmationDialog()
             }
 
             return view
+        }
+
+        private fun showLogoutConfirmationDialog() {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Logout")
+                .setMessage("Anda yakin ingin logout?")
+                .setPositiveButton("Ya") { dialog, which ->
+                    val sharedPreferences = activity?.getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+                    sharedPreferences?.edit()?.clear()?.apply()
+                    Toast.makeText(activity, "Logged out", Toast.LENGTH_SHORT).show()
+                    activity?.finish()
+                }
+                .setNegativeButton("Tidak", null)
+                .show()
         }
     }
 }
