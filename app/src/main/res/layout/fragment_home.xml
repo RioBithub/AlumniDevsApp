@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#7FFFD4"
+    android:background="@drawable/pinky"
     android:padding="16dp">
 
     <ScrollView
@@ -67,6 +67,12 @@
                 android:layout_height="wrap_content"
                 android:text="Selamat menggunakan!"
                 android:layout_marginBottom="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Aplikasi ini originally dibuat oleh Deva"></TextView>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="60dp" />
