@@ -40,7 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• Penambahan Data Alumni: Input data alumni baru dengan mudah. Anda dapat menambahkan informasi seperti nama, alamat, nomor telepon, email, dan riwayat pendidikan.\n\n• Pengelolaan Data: Lihat dan edit informasi alumni yang telah tersimpan. Anda dapat mencari alumni berdasarkan nama atau tahun kelulusan, serta memperbarui informasi yang diperlukan.\n\n• Berita Alumni: Baca berita terkini yang berkaitan dengan alumni. Tetap terhubung dengan komunitas alumni melalui update berita dan acara yang relevan.\n\n• Profil Pengguna: Lihat informasi pribadi pengguna yang tersimpan di aplikasi. Pengguna dapat memperbarui profil mereka untuk memastikan data yang akurat dan terkini."
+                android:text="• Penambahan Data Alumni: Input data alumni baru dengan mudah. Anda dapat menambahkan informasi seperti nama, alamat, nomor telepon, email, dan riwayat pendidikan.\n\n• Pengelolaan Data: Lihat dan edit informasi alumni yang telah tersimpan. Anda dapat mencari alumni berdasarkan nama atau tahun kelulusan, serta memperbarui informasi yang diperlukan.\n\n• Berita Hot: Baca berita terkini yang berkaitan dengan alumni dan lain lain. Dapat menjadi sarana untuk tetap terhubung dengan komunitas alumni melalui update berita dan acara yang relevan.\n\n• Profil Pengguna: Lihat informasi pribadi pengguna yang tersimpan di aplikasi. Pengguna dapat memperbarui profil mereka untuk memastikan data yang akurat dan terkini."
                 android:layout_marginBottom="8dp"/>
 
             <TextView

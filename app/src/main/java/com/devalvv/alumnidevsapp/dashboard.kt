@@ -173,7 +173,14 @@ class dashboard : AppCompatActivity() {
                     "Bagaimana Deva TI 4B bisa mencintai Syifa TI 4A?",
                     "Dalam dunia kampus Politeknik Negeri Jakarta, ada cerita cinta yang begitu manis dan menginspirasi. Berawal dari dua mahasiswa Informatika, Deva Alvyn Budinugraha dari kelas TI 4B dan Syifa Azzahirah dari kelas TI 4A. Keduanya seperti dua bagian puzzle yang akhirnya menemukan tempatnya. Berita tentang cinta mereka menggemparkan dunia maya dan nyata. Bagaimana bisa seorang Deva yang tampan dan berotot, yang hobi workout dan gaming, jatuh hati pada Syifa yang manis dan pintar? ",
                     R.drawable.berita11
+                ),
+                Berita(
+                    "27 Mahasiswa PNJ Diterima Sebagai IISMA AWARDEE 2023",
+                    "Selamat kepada 27 mahasiswa PNJ yang diterima sebagai IISMA AWARDEE 2023.",
+                    "Selamat kepada 27 mahasiswa PNJ yang telah diidentifikasi sebagai IISMA AWARDEE 2023! Kerja keras dan dedikasi Anda telah membuahkan hasil dengan persentase kelulusan sebesar 43,86%, peningkatan yang signifikan dari tahun sebelumnya. Prestasi Anda tersebar di 5 departemen, 11 program studi, dan 16 universitas tuan rumah di 8 negara, menjadikan pencapaian PNJ semakin mengesankan di kancah internasional. Kerja bagus!",
+                    R.drawable.berita12
                 )
+
             )
 
             val adapter = BeritaAdapter(requireContext(), beritaList)
