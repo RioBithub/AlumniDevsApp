@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.devalvv.alumnidevsapp"
+        applicationId = "pnj.uts.ti.deva_alvyn_budinugraha"
         minSdk = 27
         targetSdk = 34
         versionCode = 2
