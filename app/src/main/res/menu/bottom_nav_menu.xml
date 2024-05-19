@@ -8,7 +8,7 @@
         android:icon="@drawable/news"
         android:title="Berita"/>
     <item
-        android:id="@+id/profile"
+        android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Profile"/>
 </menu>

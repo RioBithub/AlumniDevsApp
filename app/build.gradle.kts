@@ -11,8 +11,8 @@ android {
         applicationId = "com.devalvv.alumnidevsapp"
         minSdk = 27
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.5x"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
