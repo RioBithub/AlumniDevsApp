@@ -1,6 +1,7 @@
 package com.devalvv.alumnidevsapp
 
 import android.app.DatePickerDialog
+import android.app.AlertDialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -76,23 +77,37 @@ class DetailAlumniActivity : AppCompatActivity() {
             val pekerjaan = pekerjaanEditText.text.toString()
             val jabatan = jabatanEditText.text.toString()
 
-            val result = dbHelper.updateAlumni(id, nim, nama, tempatLahir, tanggalLahir, alamat, agama, tlpHp, tahunMasuk, tahunLulus, pekerjaan, jabatan)
-            if (result > 0) {
-                Toast.makeText(this, "Data updated", Toast.LENGTH_SHORT).show()
-                finish()
+            if (nim.isEmpty() || nama.isEmpty() || tempatLahir.isEmpty() || tanggalLahir.isEmpty() || alamat.isEmpty() ||
+                agama.isEmpty() || tlpHp.isEmpty() || tahunMasuk.isEmpty() || tahunLulus.isEmpty() || pekerjaan.isEmpty() || jabatan.isEmpty()) {
+                Toast.makeText(this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Error updating data", Toast.LENGTH_SHORT).show()
+                val result = dbHelper.updateAlumni(id, nim, nama, tempatLahir, tanggalLahir, alamat, agama, tlpHp, tahunMasuk, tahunLulus, pekerjaan, jabatan)
+                if (result > 0) {
+                    Toast.makeText(this, "Data updated", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this, "Error updating data", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
         btnHapus.setOnClickListener {
-            val result = dbHelper.deleteAlumni(id)
-            if (result > 0) {
-                Toast.makeText(this, "Data deleted", Toast.LENGTH_SHORT).show()
-                finish()
-            } else {
-                Toast.makeText(this, "Error deleting data", Toast.LENGTH_SHORT).show()
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Konfirmasi Hapus")
+            builder.setMessage("Apakah Anda yakin ingin menghapus data ini? Anda tidak bisa memulihkannya kembali.")
+            builder.setPositiveButton("Ya") { dialog, which ->
+                val result = dbHelper.deleteAlumni(id)
+                if (result > 0) {
+                    Toast.makeText(this, "Data deleted", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this, "Error deleting data", Toast.LENGTH_SHORT).show()
+                }
             }
+            builder.setNegativeButton("Tidak") { dialog, which ->
+                // Do nothing
+            }
+            builder.show()
         }
     }
 }

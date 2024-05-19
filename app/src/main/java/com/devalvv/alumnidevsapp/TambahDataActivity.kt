@@ -60,12 +60,17 @@ class TambahDataActivity : AppCompatActivity() {
             val pekerjaan = pekerjaanEditText.text.toString()
             val jabatan = jabatanEditText.text.toString()
 
-            val result = dbHelper.addAlumni(nim, nama, tempatLahir, tanggalLahir, alamat, agama, tlpHp, tahunMasuk, tahunLulus, pekerjaan, jabatan)
-            if (result > 0) {
-                Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT).show()
-                finish()
+            if (nim.isEmpty() || nama.isEmpty() || tempatLahir.isEmpty() || tanggalLahir.isEmpty() || alamat.isEmpty() ||
+                agama.isEmpty() || tlpHp.isEmpty() || tahunMasuk.isEmpty() || tahunLulus.isEmpty() || pekerjaan.isEmpty() || jabatan.isEmpty()) {
+                Toast.makeText(this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Error saving data", Toast.LENGTH_SHORT).show()
+                val result = dbHelper.addAlumni(nim, nama, tempatLahir, tanggalLahir, alamat, agama, tlpHp, tahunMasuk, tahunLulus, pekerjaan, jabatan)
+                if (result > 0) {
+                    Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this, "Error saving data", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

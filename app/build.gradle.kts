@@ -11,8 +11,8 @@ android {
         applicationId = "pnj.uts.ti.deva_alvyn_budinugraha"
         minSdk = 27
         targetSdk = 34
-        versionCode = 4
-        versionName = "devasyifaX2.2"
+        versionCode = 5
+        versionName = "devasyifaX2.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
