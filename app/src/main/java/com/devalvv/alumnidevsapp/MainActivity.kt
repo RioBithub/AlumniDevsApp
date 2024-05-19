@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-            if (email == "deva@lafyuu.com" && password == "password") {
+            if (email == "luvsyifa@devalv.in" && password == "lovesyifa") {
                 // Simpan data ke SharedPreferences
                 val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
                 val editor = sharedPreferences.edit()

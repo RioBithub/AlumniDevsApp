@@ -9,6 +9,6 @@
         android:title="Berita"/>
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/profile"
         android:title="Profile"/>
 </menu>

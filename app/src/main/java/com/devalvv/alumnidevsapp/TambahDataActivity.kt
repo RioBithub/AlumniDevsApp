@@ -1,10 +1,12 @@
 package com.devalvv.alumnidevsapp
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 class TambahDataActivity : AppCompatActivity() {
 
@@ -25,6 +27,24 @@ class TambahDataActivity : AppCompatActivity() {
         val tahunLulusEditText = findViewById<EditText>(R.id.tahun_lulus)
         val pekerjaanEditText = findViewById<EditText>(R.id.pekerjaan)
         val jabatanEditText = findViewById<EditText>(R.id.jabatan)
+
+        // Set up DatePickerDialog for tanggal_lahir
+        tanggalLahirEditText.setOnClickListener {
+            val calendar = Calendar.getInstance()
+            val year = calendar.get(Calendar.YEAR)
+            val month = calendar.get(Calendar.MONTH)
+            val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+            val datePickerDialog = DatePickerDialog(
+                this,
+                { _, selectedYear, selectedMonth, selectedDay ->
+                    val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+                    tanggalLahirEditText.setText(selectedDate)
+                },
+                year, month, day
+            )
+            datePickerDialog.show()
+        }
 
         val btnSimpan = findViewById<Button>(R.id.btnSimpan)
         btnSimpan.setOnClickListener {
