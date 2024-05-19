@@ -5,6 +5,11 @@
     android:background="@drawable/gradient_background"
     android:orientation="vertical"
     android:padding="16dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Kembali ke home lalu kunjungi halaman ini lagi untuk melihat bahwa data sudah dihapus"></TextView>
 
     <ListView
         android:id="@+id/listViewAlumni"
